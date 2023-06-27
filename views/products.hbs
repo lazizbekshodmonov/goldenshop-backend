@@ -1,0 +1,48 @@
+{{#if products.length}}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Rating</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products}}
+        <tr>
+            <th scope="row" class="py-2">
+                <p class="m-0 mt-1">{{index}}.</p>
+            </th>
+            <th scope="row" class="py-2">
+                <p class="m-0 mt-1">{{title}}</p>
+            </th>
+            <td class="py-2">
+                <p class="m-0 mt-1">{{price}}</p>
+            </td>
+            <td class="py-2 " style="text-transform: capitalize;">
+                <p class="m-0 mt-1">{{rating}}</p>
+            </td>
+            <td class="py-2" style="font-size: 21px;">
+                <div class="d-flex justify-content-end">
+                    <a href="{{url}}" style="text-decoration: none; color:black; margin-right: 10px;">
+                        <ion-icon name="brush" class="btn btn-success"></ion-icon>
+                    </a>
+                    <form action="/dashboard/products/delete/{{_id}}" method="post" class="m-0">
+                        <button type="submit" class="btn btn-danger">
+                            <ion-icon name="trash-outline" class=""></ion-icon>
+                        </button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<div class="d-flex justify-content-center align-items-center flex-column text-muted h-100">
+    <ion-icon name="time-outline" style="font-size: 70px;"></ion-icon>
+    <h1 class=" fs-3">The product is not available!</h1>
+</div>
+{{/if}}

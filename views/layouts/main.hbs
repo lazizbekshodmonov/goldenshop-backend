@@ -1,0 +1,32 @@
+<html lang="en">
+
+{{> head}}
+
+<body>
+    {{!-- navbar --}}
+
+
+    <div class="container-fluid">
+        <div class="row d-flex">
+            {{!-- navigation --}}
+            {{> navigation}}
+
+            <div style="width: calc(100% - 250px); height: calc(100vh - 65px);" class="p-0">
+                {{> navbar}}
+                <main class=" ms-sm-auto overflow-auto px-md-4">
+
+                    {{!-- body --}}
+                    {{{body}}}
+                </main>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    {{!-- footer --}}
+    {{> footer}}
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Role</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each admins}}
+            <tr>
+                <th scope="row" class="py-2">
+                    <p class="m-0 mt-1">{{index}}</p>
+                </th>
+                <th scope="row" class="py-2">
+                    <p class="m-0 mt-1">{{firstName}} {{lastName}}</p>
+                </th>
+                <td class="py-2">
+                    <p class="m-0 mt-1">{{email}}</p>
+                </td>
+                <td class="py-2 " style="text-transform: capitalize;">
+                    <p class="m-0 mt-1">{{role}}</p>
+                </td>
+                <td class="py-2" style="font-size: 21px;">
+                    <div class="d-flex justify-content-end">
+                        <a href="{{url}}" style="text-decoration: none; color:black; margin-right: 10px;">
+                            <ion-icon name="brush" class="btn btn-success"></ion-icon>
+                        </a>
+                        <form action="/dashboard/admins/delete/{{_id}}" method="post" class="m-0">
+                            <button type="submit" class="btn btn-danger">
+                                <ion-icon name="trash-outline" class=""></ion-icon>
+                            </button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            {{/each}}
+
+        </tbody>
+    </table>
+</div>

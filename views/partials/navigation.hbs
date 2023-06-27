@@ -1,0 +1,83 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 250px; height: 100vh;">
+    <a href="#"
+        class="d-flex align-items-center justify-content-center w-100 mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <span class="fs-4">Admin</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+
+        <li>
+            {{#if dashboardActive}}
+            <a href="/dashboard" class="nav-link text-white active">
+                <ion-icon name="home" class=" mx-2"></ion-icon>
+                Dashboard
+            </a>
+            {{else}}
+            <a href="/dashboard" class="nav-link text-white">
+                <ion-icon name="home" class=" mx-2 fs-5"></ion-icon>
+                Dashboard
+            </a>
+            {{/if}}
+        </li>
+        <li>
+            {{#if productActive}}
+            <a href="/dashboard/products" class="nav-link text-white active">
+                <ion-icon name="book" class=" mx-2 fs-6"></ion-icon>
+                Products
+            </a>
+            {{else}}
+            <a href="/dashboard/products" class="nav-link text-white">
+                <ion-icon name="book" class=" mx-2 fs-6"></ion-icon>
+                Products
+            </a>
+            {{/if}}
+
+        </li>
+        <li>
+
+            {{#if orderActive}}
+            <a href="/dashboard/orders" class="nav-link text-white active">
+                <ion-icon name="basket" class=" mx-2 fs-5"></ion-icon>
+                Orders
+            </a>
+            {{else}}
+            <a href="/dashboard/orders" class="nav-link text-white">
+                <ion-icon name="basket" class=" mx-2 fs-5"></ion-icon>
+                Orders
+            </a>
+            {{/if}}
+
+        </li>
+        <li>
+            {{#if adminActive}}
+            <a href="/dashboard/admins" class="nav-link text-white active">
+                <ion-icon name="person" class="mx-2 fs-5"></ion-icon>
+                Admins
+            </a>
+            {{else}}
+            <a href="/dashboard/admins" class="nav-link text-white">
+                <ion-icon name="person" class="mx-2 fs-5"></ion-icon>
+                Admins
+            </a>
+            {{/if}}
+
+        </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>mdo</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+    </div>
+</div>
